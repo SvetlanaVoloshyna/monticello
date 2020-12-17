@@ -69,7 +69,7 @@ function css() {
         })]))
         .pipe(
             scss({
-                outputStyle: 'expaded'
+                outputStyle: 'expanded'
             })
         )
         .pipe(dest(path.build.css))
