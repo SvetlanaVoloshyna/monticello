@@ -1,0 +1,58 @@
+@mixin bg-img($url) {
+    background: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin title($color){
+    color: $color;
+    font-family: "Gotham";
+    font-size: 44px;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+@mixin titleLine($color,$bg-color) {
+    content: "";
+    border: 1px solid $color;
+    background-color: $bg-color;
+    width: 100px;
+    top: -40px;
+    transform: translateX(-50%);
+    left:50%;
+    position: absolute;
+}
+@mixin flex ($justCont){
+    display: flex;
+    justify-content: $justCont;
+}
+@mixin button ($padding,$color,$bordColor) {
+    padding: $padding;
+    color: $color;
+    font-family: "Gotham - Book";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border-color: $bordColor;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+@mixin hover-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+@mixin active-button {
+    transform: scale(0.9); 
+    transition: all 0.3s linear;
+}
+@mixin hover-icon {
+    transform: scale(1.1);
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+@mixin active-icon {
+    transform: scale(0.9); 
+    transition: all 0.3s linear;
+}
